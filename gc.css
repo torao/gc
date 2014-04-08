@@ -3,3 +3,30 @@
   background-color: white;
   border: solid 1px black;
 }
+
+.memory-pool {
+  position: absolute;
+  width: 360px;
+  height: 48px;
+  border: solid 1px lightgrey;
+}
+
+.foundation {
+  font-size: 12px;
+  padding-left: 4px;
+  width: 360px;
+  height: 16px;
+  top: 32px;
+}
+
+.foundation.eden {
+  position: relative;
+  color: white;
+  background-color: #1D417A;
+}
+
+.foundation.cms {
+  position: relative;
+  color: white;
+  background-color: #7F3620;
+}
