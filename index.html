@@ -16,9 +16,76 @@
 
 <canvas id="screen" width="400" height="230"></canvas>
 
-<div style="display:block;">
-  <div class="memory-pool"><div class="foundation eden">Eden</div></div>
-  <div class="memory-pool"><div class="foundation cms">Mark &amp; Sweep</div></div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Serial GC</h4>
+      <div class="gc">
+        <div class="memory-pool">
+          <div class="foundation cms"><div>Mark &amp; Sweep</div></div>
+        </div>
+      </div>
+      <p>
+        JDK 1.1 以前に使用されていた GC 実装。GC 実行中は全てのアプリケーションスレッドを停止します。
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h4>Incremental GC</h4>
+      <div class="gc">
+        <div class="memory-pool">
+          <div class="foundation cms"><div>Mark &amp; Sweep</div></div>
+        </div>
+      </div>
+      <p>
+        Serial GC と同じですが、GC 中に GC スレッドとアプリケーションスレッドを短時間で相互に切り替えて、スローダウンしつつもアプリケーションを停止させない動作を行います。
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Parallel GC</h4>
+      <div class="gc">
+        <div class="memory-pool">
+          <div class="foundation cms"><div>Mark &amp; Sweep</div></div>
+        </div>
+      </div>
+      <p>
+      </p>
+    </div>
+    <div class="col-md-6">
+      <h4>Concurrent GC</h4>
+      <div class="gc">
+        <div class="memory-pool">
+          <div class="foundation cms"><div>Mark &amp; Sweep</div></div>
+        </div>
+      </div>
+      <p>
+      </p>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h4>Generation GC (Copying GC + CMS)</h4>
+      <div class="gc">
+        <div class="memory-pool">
+          <div class="foundation eden"><div>Eden</div></div>
+        </div>
+        <div class="memory-pool">
+          <div class="foundation survivor">
+            <div>From</div>
+            <div class="to">To</div>
+          </div>
+        </div>
+        <div class="memory-pool">
+          <div class="foundation cms"><div>Mark &amp; Sweep</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 
 </body>

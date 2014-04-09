@@ -4,18 +4,20 @@
   border: solid 1px black;
 }
 
+.gc {
+	margin: 0 0 8px 0;
+}
+
 .memory-pool {
-  position: absolute;
   width: 360px;
   height: 48px;
   border: solid 1px lightgrey;
+  margin-top: 8px;
 }
 
 .foundation {
-  font-size: 12px;
-  padding-left: 4px;
   width: 360px;
-  height: 16px;
+  height: 18px;
   top: 32px;
 }
 
@@ -25,8 +27,34 @@
   background-color: #1D417A;
 }
 
+.foundation.survivor {
+  position: relative;
+  color: white;
+  background-color: #224E45;
+}
+
+.foundation.survivor div {
+	position: absolute;
+	width: 180px;
+	height: 18px;
+}
+
+.foundation.survivor div:nth-of-type(2) {
+	left: 180px;
+}
+
+.foundation.survivor .to {
+	background-color: #008E4A;
+}
+
 .foundation.cms {
   position: relative;
   color: white;
   background-color: #7F3620;
+}
+
+.foundation div {
+  font-size: 12px;
+  padding-top: 2px;
+  padding-left: 4px;
 }
